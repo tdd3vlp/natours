@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "The Landing page of Natours",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdd3vlp/natours.git"
+  },
+  "author": "tdd3vlp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdd3vlp/natours/issues"
+  },
+  "homepage": "https://github.com/tdd3vlp/natours#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
