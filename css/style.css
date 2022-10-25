@@ -124,6 +124,14 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.u-margin-top-big {
+  margin-bottom: 8rem;
+}
+
+.u-margin-top-huge {
+  margin-bottom: 10rem;
+}
+
 .btn:link, .btn:visited {
   padding: 1.5rem 4rem;
   display: inline-block;
@@ -143,6 +151,10 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777;
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
 }
 .btn--animated {
   animation: moveInBottom 0.5s ease-out;
@@ -220,7 +232,7 @@ body {
 }
 .card {
   position: relative;
-  height: 50rem;
+  height: 51rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
 }
@@ -229,12 +241,13 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50rem;
-  color: #fff;
+  height: 51rem;
+  color: #777;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   backface-visibility: hidden;
   transition: all 0.5s ease;
+  overflow: hidden;
 }
 .card__side--front {
   background-color: #fff;
@@ -245,19 +258,107 @@ body {
 .card__side--back-1 {
   background: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
+.card__side--back-2 {
+  background: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+.card__side--back-3 {
+  background: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
 .card:hover .card__side--front {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .card:hover .card__side--back {
   transform: rotateY(0);
+}
+.card__picture {
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card__picture--1 {
+  height: 23rem;
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../img/nat-5.jpg);
+  background-blend-mode: screen;
+}
+.card__picture--2 {
+  height: 23rem;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../../img/nat-6.jpg);
+  background-blend-mode: screen;
+}
+.card__picture--3 {
+  height: 23rem;
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../../img/nat-7.jpg);
+  background-blend-mode: screen;
+}
+.card__heading {
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  width: 75%;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-align: right;
+  text-transform: uppercase;
+  color: #fff;
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)), url();
+}
+.card__heading-span--2 {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)), url();
+}
+.card__heading-span--3 {
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)), url();
+}
+.card__details {
+  padding: 3rem;
+}
+.card__details ul {
+  margin: 0 auto;
+  width: 80%;
+  list-style: none;
+}
+.card__details ul li {
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+.card__price-box {
+  margin-bottom: 8rem;
+  text-align: center;
+  color: #fff;
+}
+.card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.card__price-value {
+  font-size: 6rem;
+  font-weight: 100;
 }
 
 .header {
   height: 95vh;
   position: relative;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../img/hero.jpg);
   background-position: top;
   background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 .header__logo-box {
@@ -338,7 +439,7 @@ body {
 
 .section-tours {
   margin-top: -10rem;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   background-color: #f7f7f7;
 }
 

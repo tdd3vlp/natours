@@ -28,6 +28,11 @@
     color: $color-grey-dark;
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
   &--animated {
     animation: moveInBottom 0.5s ease-out;
   }
